@@ -56,9 +56,9 @@ let colors = {
   'grey-darkest': '#484748',
   'black': '#202020',
 
-  'brand-light': '#c2bcce',
-  'brand': '#151045',
-  'brand-dark': '#130925',
+  'brand-light': '#d53f3f',
+  'brand': '#d53f3f',
+  'brand-dark': '#aa3232',
 
   'cta-light': '#cfc6bd',
   'cta': '#453010',

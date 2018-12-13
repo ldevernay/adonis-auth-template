@@ -15,7 +15,7 @@
 
 const Route = use('Route')
 
-Route.get('/', 'PostController.index')
+Route.on('/').render('welcome');
 
 // Those routes should be only accessible
 // when you are not logged in
@@ -31,10 +31,4 @@ Route.group(() => {
 // when you are logged in
 Route.group(() => {
   Route.get('logout', 'SessionController.delete')
-
-  Route.get('posts/create', 'PostController.create')
-  Route.post('posts', 'PostController.store')
-  Route.get('posts/:id/edit', 'PostController.edit')
-  Route.get('posts/:id/delete', 'PostController.delete')
-  Route.put('posts/:id', 'PostController.update')
 }).middleware(['auth'])

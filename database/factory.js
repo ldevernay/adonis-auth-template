@@ -22,13 +22,3 @@ Factory.blueprint('App/Models/User', (faker, index, data) => {
 
   return Object.assign(defaultValue, data)
 })
-
-Factory.blueprint('App/Models/Post', (faker) => {
-  return {
-    title: faker.sentence(),
-    body: faker.paragraph(),
-    user_id: async () => {
-      return (await Factory.model('App/Models/User').create()).id
-    }
-  }
-})
